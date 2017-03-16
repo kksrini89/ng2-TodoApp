@@ -1,0 +1,12 @@
+<div class="add-todo">
+  <div class="container">
+    <form class="form-horizontal" (ngSubmit)="onSubmit(inputForm)" #inputForm="ngForm">
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-xs-8 col-sm-6">
+          <input type="text" class="form-control" placeholder="TASK" name="todo" [(ngModel)]="todo"/>
+        </div>        
+        <button type="submit" class="col-sm-1 col-xs-2 btn btn-primary btn-sm">ADD</button>        
+      </div>
+    </form>
+  </div>
+</div>
