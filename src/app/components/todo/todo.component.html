@@ -3,10 +3,28 @@
     <form class="form-horizontal" (ngSubmit)="onSubmit(inputForm)" #inputForm="ngForm">
       <div class="form-group">
         <div class="col-sm-offset-2 col-xs-8 col-sm-6">
-          <input type="text" class="form-control" placeholder="TASK" name="todo" [(ngModel)]="todo"/>
-        </div>        
-        <button type="submit" class="col-sm-1 col-xs-2 btn btn-primary btn-sm">ADD</button>        
+          <input type="text" class="form-control" placeholder="TASK" name="todo" [(ngModel)]="todo" />
+        </div>
+        <button type="submit" class="col-sm-1 col-xs-2 btn btn-primary btn-sm">ADD</button>
       </div>
     </form>
   </div>
+</div>
+<!--<div class="todo-add">
+  <form class="form-horizontal" (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="form-group">
+      <div class="col-xs-offset-3 col-sm-offset-3 col-md-offset-3 col-sm-4 col-xs-6">
+        <input type="text" class="form-control" placeholder="TASK" [(ngModel)]="title" name="title" />
+      </div>
+      <button type="submit" class="col-sm-offset-1 col-sm-1 btn btn-primary btn-sm">ADD</button>
+    </div>
+  </form>
+</div>-->
+
+<div class="todo-list">
+  <ul class="list-unstyled">
+    <li *ngFor="let todo of todos | async;let i=index">
+      {{todo.name}}
+    </li>
+  </ul>
 </div>

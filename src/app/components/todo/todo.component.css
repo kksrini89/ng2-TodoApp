@@ -1,3 +1,19 @@
 .add-todo{
     padding: 80px;
 }
+/*.todo-add{
+    margin-top: 70px;
+}*/
+
+.todo-list ul li{
+    margin:50px;
+  padding: 35px;
+  background-color:lightgray;  
+  border: 2px solid white; 
+  border-radius : 5px;
+}
+
+.todo-list ul li:hover{
+    border-left: 5px solid orange;
+    cursor: pointer;
+}

@@ -14,6 +14,6 @@ export class TodoComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form);
+    // console.log(form);
   }
 }

@@ -7,8 +7,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { Firebaseauth } from "app/services/firebaseauth";
 
-export const config = {
+// Initialize Firebase
+export const firebaseConfig = {
   apiKey: "AIzaSyCJVjm_ljgXu06bDzTOO4pDxhdhWlwEPYM",
   authDomain: "todoapp-4d7ed.firebaseapp.com",
   databaseURL: "https://todoapp-4d7ed.firebaseio.com",
@@ -26,9 +28,9 @@ export const config = {
     BrowserModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(config)
-  ],
-  providers: [],
+    AngularFireModule.initializeApp(firebaseConfig)
+  ],  
+  providers: [Firebaseauth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
