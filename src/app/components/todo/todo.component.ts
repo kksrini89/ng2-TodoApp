@@ -1,3 +1,5 @@
+import { FirebaseListObservable } from 'angularfire2';
+import { Firebaseauth } from './../../services/firebaseauth';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -9,13 +11,12 @@ import { NgForm } from '@angular/forms';
 export class TodoComponent implements OnInit {
   title: string = '';
   description: string = '';
-  // todo: any = {
+  todos: FirebaseListObservable<any>;
 
-  // };
-
-  constructor() { }
+  constructor(private firebaseDb: Firebaseauth) { }
 
   ngOnInit() {
+    this.todos = this.firebaseDb.getTodos();
   }
 
   onSubmit(form: NgForm) {
