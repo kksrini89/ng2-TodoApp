@@ -4,10 +4,12 @@
 /*.todo-add{
     margin-top: 70px;
 }*/
-
+.todo-list{
+    margin:-5% 20% 20% 20%;
+}
 .todo-list ul li{
     margin:50px;
-  padding: 35px;
+  padding: 20px;
   background-color:lightgray;  
   border: 2px solid white; 
   border-radius : 5px;
